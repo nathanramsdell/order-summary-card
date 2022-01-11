@@ -1,0 +1,115 @@
+@import url('https://fonts.google.com/specimen/Red+Hat+Display');
+
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-pale-blue: hsl(245, 75%, 52%); /* payment button */
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%); /* payment button active */
+  --dark-blue: hsl(223, 47%, 23%); /*Header Blue */
+  --white: #fff;
+}
+
+body {
+  font-family: 'Red Hat Display', sans-serif;
+  display: flex;
+  align-items: center;
+  background-image: url('images/pattern-background-desktop.svg');
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: var(--pale-blue);
+  box-sizing: border-box;
+}
+.header {
+  color: var(--dark-blue);
+}
+.title {
+  font-size: 2rem;
+}
+.body-text,
+.cancel-order-btn a {
+  color: var(--desaturated-blue);
+  text-decoration: none;
+}
+.popup {
+  max-width: 500px;
+  width: 50%;
+  margin: 4em auto;
+  background-color: var(--white);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.popup-graphic img {
+  width: 100%;
+}
+.popup-content {
+  max-width: 80%;
+  margin: 0 auto;
+}
+.popup-summary {
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+}
+.popup-summary .body-text {
+  line-height: 1.7rem;
+}
+.popup-pricing {
+  display: flex;
+  align-items: center;
+  padding: 0 1em;
+  background-color: var(--very-pale-blue);
+  border-radius: 1em;
+}
+.prices .header {
+  font-size: 1rem;
+  margin: 1rem 0;
+}
+.pricing-badge {
+  width: 20%;
+}
+.prices {
+  width: 65%;
+}
+.price-change {
+  width: 15%;
+}
+.price-change a {
+  color: var(--bright-pale-blue);
+}
+.popup-btn-container {
+  text-align: center;
+  margin-bottom: 2.5em;
+}
+.proceed-to-payment-btn {
+  margin: 2em 0;
+}
+.blue-btn {
+  display: block;
+  padding: 1em;
+  border-radius: 0.5em;
+  color: var(--white);
+  background-color: var(--bright-pale-blue);
+  box-shadow: 4.5px 9px 9px hsl(0deg 0% 0% / 0.36);
+  text-decoration: none;
+}
+.blue-btn:hover {
+  background-color: var(--desaturated-blue);
+}
+.cancel-order-btn a {
+  font-weight: 500;
+}
+.cancel-order-btn a:hover {
+  color: var(--dark-blue);
+}
+
+@media screen and (max-width: 768px) {
+  .popup {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .popup {
+    margin: 0 1em;
+  }
+}
